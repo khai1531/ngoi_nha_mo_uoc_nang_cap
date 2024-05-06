@@ -1,10 +1,12 @@
 import turtle
 import math
 
+screen = turtle.Screen()
 t = turtle.Turtle()
 t.pensize(1)
 t.hideturtle()
 t.speed(0)
+t.screen.bgcolor("lightblue")
 #Vẽ tầng 1
 #-------------------------------#
 t.penup()
@@ -365,6 +367,94 @@ t.pendown()
 t.end_fill()
 #-----------------------------
 #Vẽ mặt trời
+for i in range(8):
+  t.penup()
+  t.goto(250,350)
+  t.pendown()
+
+  t.forward(100)
+  t.right(45)
+
+t.penup()
+t.goto(250,300) 
+t.pendown()
+
+t.pensize(3)
+
+t.pencolor("black")
+
+t.fillcolor("Yellow")
+
+t.begin_fill()
+t.setheading(0)
+t.circle (50)
+t.end_fill()
+#-------------------------------
+#Vẽ xe
+t.fillcolor("hotpink")
+t.begin_fill()
+t.penup()
+t.goto(200,-300)
+t.pendown()
+t.forward(300)
+t.circle(40, 180)
+t.forward(60)
+t.setheading(90)
+t.circle(90, 180)
+t.right(90)
+t.forward(60)
+t.circle(40, 180)
+t.end_fill()
+#----------------------------
+t.fillcolor("white")
+t.begin_fill()
+t.penup()
+t.goto(200,275)
+t.pendown()
+t.forward(100)
+t.circle(20, 180)
+t.forward(20)
+t.setheading(90)
+t.circle(30, 180)
+t.right(90)
+t.forward(20)
+t.circle(20, 180)
+t.end_fill()
+#-----------------
+t.penup()
+t.goto(250,-300)
+t.pendown()
+t.setheading(180)
+t.fillcolor("black")
+t.begin_fill()
+t.circle(40)
+t.end_fill()
+t.penup()
+t.goto(450,-300)
+t.pendown()
+t.setheading(180)
+t.fillcolor("black")
+t.begin_fill()
+t.circle(40)
+t.end_fill()
+#-------------------
+t.fillcolor("lightsteelblue")
+t.begin_fill()
+t.penup()
+t.goto(280,-220)
+t.pendown()
+t.backward(140)
+t.penup()
+t.goto(420.00,-220.00)
+t.pendown()
+t.setheading(450)
+t.circle(70, 180)
+t.end_fill()
+t.penup()
+t.goto(350.00,-220.00)
+t.pendown()
+t.backward(70)
+#-----------------------------
 position = t.pos()
 print(position)
 turtle.done()
